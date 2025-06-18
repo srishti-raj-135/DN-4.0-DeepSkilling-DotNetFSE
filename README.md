@@ -1,17 +1,25 @@
 # 💻 DN-4.0-DeepSkilling-DotNetFSE
 This repository contains weekly hands-on assignments for the Deep Skilling Program.
 
-## ✅ [Week 1](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201)
+📁 Week1
+   ├── 📁 DataStructuresAndAlgorithms
+   │    ├── 📁 ECommerceSearch
+   │    └── 📁 FinancialForecasting
+   └── 📁 DesignPatternsAndPrinciples
+        ├── 📁 FactoryMethodPatternExample
+        └── 📁 SingletonPatternExample
 
-### 🟡 [Data Structures and Algorithms](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Data%20Structures%20and%20Algorithms)
+## [Week 1](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201)
 
-- 🔍 [ECommerceSearch](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Data%20Structures%20and%20Algorithms/ECommerceSearch)
-- 📈 [FinancialForecasting](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Data%20Structures%20and%20Algorithms/FinancialForecasting)
+### [Data Structures and Algorithms](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Data%20Structures%20and%20Algorithms)
 
-### 🟢 [Design Patterns and Principles](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Design%20Patterns%20and%20Principles)
+-  [ECommerceSearch](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Data%20Structures%20and%20Algorithms/ECommerceSearch
+-  [FinancialForecasting](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Data%20Structures%20and%20Algorithms/FinancialForecasting)
 
-- 🏭 [FactoryMethodPatternExample](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Design%20Patterns%20and%20Principles/FactoryMethodPatternExample)
-- 🔒 [SingletonPatternExample](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Design%20Patterns%20and%20Principles/SingletonPatternExample)
+### [Design Patterns and Principles](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Design%20Patterns%20and%20Principles)
+
+- [FactoryMethodPatternExample](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Design%20Patterns%20and%20Principles/FactoryMethodPatternExample)
+- [SingletonPatternExample](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201/Design%20Patterns%20and%20Principles/SingletonPatternExample)
 
 ## Author
 
