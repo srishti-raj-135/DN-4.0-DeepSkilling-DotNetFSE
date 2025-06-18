@@ -11,6 +11,7 @@ This repository contains weekly hands-on assignments for the Deep Skilling Progr
    └── 📁 DesignPatternsAndPrinciples
         ├── 📁 FactoryMethodPatternExample
         └── 📁 SingletonPatternExample
+```
 
 ## [Week 1](https://github.com/srishti-raj-135/DN-4.0-DeepSkilling-DotNetFSE/tree/main/Week%201)
 
