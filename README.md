@@ -4,11 +4,11 @@ This repository contains weekly hands-on assignments for the Deep Skilling Progr
 ## 📁 Project Folder Structure
 
 ```text
-📁 Week1
-   ├── 📁 DataStructuresAndAlgorithms
+📁 Week 1
+   ├── 📁 Data Structures And Algorithms
    │    ├── 📁 ECommerceSearch
    │    └── 📁 FinancialForecasting
-   └── 📁 DesignPatternsAndPrinciples
+   └── 📁 Design Patterns And Principles
         ├── 📁 FactoryMethodPatternExample
         └── 📁 SingletonPatternExample
 ```
