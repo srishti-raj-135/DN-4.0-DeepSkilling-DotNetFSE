@@ -1,4 +1,4 @@
-# 💻 DN-4.0-DeepSkilling-DotNetFSE
+# DN-4.0-DeepSkilling-DotNetFSE
 This repository contains weekly hands-on assignments for the Deep Skilling Program.
 
 ## 📁 Project Folder Structure
