@@ -1,0 +1,30 @@
+DELIMITER $$
+
+CREATE PROCEDURE GetEmployeeCountByDepartment (
+    IN p_DepartmentID INT
+)
+BEGIN
+    -- Count the number of employees in the given department
+    SELECT COUNT(*) AS TotalEmployees
+    FROM Employees
+    WHERE DepartmentID = p_DepartmentID;
+END$$
+
+DELIMITER ;
+
+CALL GetEmployeeCountByDepartment(1);
+
+
+-- Create a scalar function 
+
+DELIMITER $$
+
+CREATE FUNCTION fn_CalculateAnnualSalary(Salary DECIMAL(10, 2))
+RETURNS DECIMAL(10, 2)
+DETERMINISTIC
+BEGIN
+    -- Calculate the annual salary (Salary * 12)
+    RETURN Salary * 12;
+END$$
+
+DELIMITER ;
