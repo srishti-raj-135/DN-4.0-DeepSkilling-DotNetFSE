@@ -1,0 +1,45 @@
+create table products (product_id int, product_name varchar(100), category varchar(100), price decimal(10, 2));
+insert into products values
+(1, 'Laptop A', 'Electronics', 70000),
+(2, 'Laptop B', 'Electronics', 65000),
+(3, 'Mouse', 'Electronics', 1000),
+(4, 'Keyboard', 'Electronics', 1500),
+(5, 'Shirt', 'Clothing', 1500),
+(6, 'Jacket', 'Clothing', 3000),
+(7, 'Jeans', 'Clothing', 2500),
+(8, 'T-shirt', 'Clothing', 1000),
+(9, 'Fridge', 'Appliances', 30000),
+(10, 'Washing Machine', 'Appliances', 25000),
+(11, 'Microwave', 'Appliances', 15000),
+(12, 'Oven', 'Appliances', 15000);
+select 
+    product_id,
+    product_name,
+    category,
+    price,
+    ROW_NUMBER() OVER (PARTITION BY category ORDER BY price DESC) AS row_num
+from products;
+select 
+    product_id,
+    product_name,
+    category,
+    price,
+    RANK() OVER (PARTITION BY category ORDER BY price DESC) AS rank_pos
+from products;
+select 
+    product_id,
+    product_name,
+    category,
+    price,
+    DENSE_RANK() OVER (PARTITION BY category ORDER BY price DESC) AS dense_rank_pos
+from products;
+WITH ranked_products AS (
+    SELECT 
+        product_id,
+        product_name,
+        category,
+        price,
+        ROW_NUMBER() OVER (PARTITION BY category ORDER BY price DESC) AS row_num
+    FROM products
+)
+select * from ranked_products where row_num <= 3;
