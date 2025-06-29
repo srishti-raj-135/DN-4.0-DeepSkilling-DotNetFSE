@@ -1,0 +1,42 @@
+Install-Package NUnit
+Install-Package NUnit3TestAdapter
+Install-Package Moq
+
+using NUnit.Framework;
+using Moq;
+using System.Collections.Generic;
+using MagicFilesLib;
+
+namespace DirectoryExplorer.Tests
+{
+    [TestFixture]
+    public class DirectoryExplorerTests
+    {
+        private readonly string _file1 = "file.txt";
+        private readonly string _file2 = "file2.txt";
+
+        private IDirectoryExplorer _directoryExplorerMock;
+
+        [OneTimeSetUp]
+        public void Init()
+        {
+            var mock = new Mock<IDirectoryExplorer>();
+            mock.Setup(m => m.GetFiles(It.IsAny<string>()))
+                .Returns(new List<string> { _file1, _file2 });
+
+            _directoryExplorerMock = mock.Object;
+        }
+
+        [TestCase("C:\\TestFolder")]
+        public void GetFiles_ShouldReturnExpectedFiles(string path)
+        {
+            // Act
+            var result = _directoryExplorerMock.GetFiles(path);
+
+            // Assert
+            Assert.IsNotNull(result, "The returned collection should not be null.");
+            Assert.AreEqual(2, result.Count, "The collection should contain 2 files.");
+            CollectionAssert.Contains(result, _file1, $"The collection should contain '{_file1}'.");
+        }
+    }
+}
