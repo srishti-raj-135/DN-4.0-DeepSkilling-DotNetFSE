@@ -1,0 +1,64 @@
+Install-Package NUnit
+Install-Package NUnit3TestAdapter
+Install-Package Moq
+
+// File: PlayerTests.cs
+using NUnit.Framework;
+using Moq;
+using System;
+using PlayersManagerLib;
+
+namespace PlayerManager.Tests
+{
+    [TestFixture]
+    public class PlayerTests
+    {
+        private Mock<IPlayerMapper> _playerMapperMock;
+
+        [OneTimeSetUp]
+        public void Init()
+        {
+            _playerMapperMock = new Mock<IPlayerMapper>();
+        }
+
+        [TestCase("Dhoni")]
+        public void RegisterNewPlayer_ShouldCreateNewPlayer_WhenPlayerNameIsUnique(string name)
+        {
+            // Arrange
+            _playerMapperMock.Setup(m => m.IsPlayerNameExistsInDb(name)).Returns(false);
+
+            // Act
+            var player = Player.RegisterNewPlayer(name, _playerMapperMock.Object);
+
+            // Assert
+            Assert.IsNotNull(player);
+            Assert.AreEqual(name, player.Name);
+            Assert.AreEqual(23, player.Age);
+            Assert.AreEqual("India", player.Country);
+            Assert.AreEqual(30, player.NoOfMatches);
+        }
+
+        [TestCase("")]
+        [TestCase("   ")]
+        public void RegisterNewPlayer_ShouldThrowException_WhenNameIsEmpty(string name)
+        {
+            // Arrange
+            _playerMapperMock.Setup(m => m.IsPlayerNameExistsInDb(It.IsAny<string>())).Returns(false);
+
+            // Act & Assert
+            var ex = Assert.Throws<ArgumentException>(() => Player.RegisterNewPlayer(name, _playerMapperMock.Object));
+            Assert.That(ex.Message, Is.EqualTo("Player name can’t be empty."));
+        }
+
+        [TestCase("Sachin")]
+        public void RegisterNewPlayer_ShouldThrowException_WhenPlayerAlreadyExists(string name)
+        {
+            // Arrange
+            _playerMapperMock.Setup(m => m.IsPlayerNameExistsInDb(name)).Returns(true);
+
+            // Act & Assert
+            var ex = Assert.Throws<ArgumentException>(() => Player.RegisterNewPlayer(name, _playerMapperMock.Object));
+            Assert.That(ex.Message, Is.EqualTo("Player name already exists."));
+        }
+    }
+}
