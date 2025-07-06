@@ -1,0 +1,36 @@
+Lab 5: Retrieving Data from the Database 
+Scenario: 
+The store wants to display product details on the dashboard. 
+Objective: 
+Use Find, FirstOrDefault, and ToListAsync to retrieve data. 
+Steps: 
+1. Retrieve All Products: 
+var products = await context.Products.ToListAsync(); 
+foreach (var p in products) 
+Console.WriteLine($"{p.Name} - ₹{p.Price}"); 
+2. Find by ID: 
+var product = await context.Products.FindAsync(1); 
+Console.WriteLine($"Found: {product?.Name}"); 
+3. FirstOrDefault with Condition:var expensive = await context.Products.FirstOrDefaultAsync(p => p.Price > 5000 
+0); 
+Console.WriteLine($"Expensive: {expensive?.Name}")
+
+
+
+Output:
+
+
+Using Database: RetailStoreDb
+
+All Products:
+Laptop - Electronics - Rs.75000.00
+Rice Bag - Groceries - Rs.1200.00
+
+Find by ID (Product with ID = 1):
+Found: Laptop
+
+First Product with Price > Rs.50,000:
+Expensive: Laptop
+
+C:\Users\KIIT\OneDrive\Desktop\Digital-Nurture-4.0-DotNetFSE-main\Solution\week-3\lab5\bin\Debug\net8.0\lab5.exe (process 21092) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
