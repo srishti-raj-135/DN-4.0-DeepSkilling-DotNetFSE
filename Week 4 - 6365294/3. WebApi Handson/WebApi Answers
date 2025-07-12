@@ -1,0 +1,10 @@
+Explain the usage of FromBody attribute
+oRead the model object from request, other than the query string parameter
+
+In ASP.NET Core Web API, the [FromBody] attribute plays a crucial role by specifying that a parameter's value should be extracted from the request body instead of the query string, route data, or form values. This becomes particularly handy when you're working with complex objects, like classes that have multiple properties, which are usually sent as JSON or XML in the body of a POST, PUT, or PATCH request.
+
+For example, if a client sends a JSON object that represents an employee, the [FromBody] attribute allows the framework to convert that JSON content into a corresponding Employee object within the controller action. Without this attribute, ASP.NET might try to fill the object using other sources, such as the query string or route parameters, which could lead to null or incomplete values.
+
+Here's a practical example: When you define an action method like public IActionResult AddEmployee([FromBody] Employee emp), the [FromBody] attribute instructs the runtime to look into the body of the HTTP request and transform the incoming JSON into an Employee instance. This ensures that the model binding and validation are done correctly.
+
+Using [FromBody] is vital for directly reading structured request payloads from the client, and it’s a fundamental aspect of RESTful API design when accepting data in POST or PUT requests.
