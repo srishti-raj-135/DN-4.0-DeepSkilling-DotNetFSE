@@ -1,0 +1,28 @@
+Objectives
+
+Define SPA and its benefits
+
+A Single Page Application (SPA) is a web application that engages with the user by rewriting the existing page dynamically, as opposed to loading completely new pages from the server. This creates a smoother, quicker user experience. SPA is also known as Progressive Web Apps (PWA). The main advantage of an SPA is that only one HTML file needs to be loaded initially, upon which the content is dynamically updated through JavaScript. This minimizes network usage and provides better responsiveness as it prevents full page reloads.
+
+Define React and identify its working
+
+React is a declarative, lightweight, and versatile JavaScript library created by Facebook that can be used to develop user interfaces. It enables developers to create encapsulated components with their own state, and compose them together to create complex UIs. React operates by keeping track of a virtual DOM, an efficient copy of the actual DOM. When there are differences, React updates the virtual DOM first, calculates the differences (diffing), and updates just the differing parts of the actual DOM efficiently.
+
+Identify the differences between SPA and MPA
+
+SPAs load one HTML file and update the content dynamically, while MPAs are multiple pages that reload each time a new page is accessed. SPAs are quicker and provide a smoother experience, while MPAs are better suited for SEO purposes and for large applications where full pages are required.
+
+Explain Pros & Cons of Single-Page Application
+The benefits of SPAs are that the navigation is quicker, less load on the server, improved performance, and smoother user experience. The drawbacks are that SEO is poor (unless server-side rendering is employed), the initial load can be slower, and the complexity of client-side routing and state management can increase.
+Define virtual DOM
+React makes UI development easy by using reusable components, unidirectional data flow, and effective DOM updates via the virtual DOM. The virtual DOM is one of React's central ideas; it's an in-memory representation of the real DOM. When a component's state alters, React changes the virtual DOM and determines the differences from the last version to calculate the minimum set of changes necessary to update the actual DOM.
+
+Explain about React
+
+
+React makes UI development easy by using reusable components, unidirectional data flow, and effective DOM updates via the virtual DOM. React is a declarative, lightweight, and versatile JavaScript library created by Facebook that can be used to develop user interfaces. It enables developers to create encapsulated components with their own state, and compose them together to create complex UIs
+
+
+Explain Features of React
+
+React's advantages are component-based structure, virtual DOM for performance, JSX (JavaScript XML) for template writing, unidirectional data flow, and rigorous ecosystem support for routing, state management, and server-side rendering.
