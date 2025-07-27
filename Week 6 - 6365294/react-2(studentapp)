@@ -1,0 +1,28 @@
+Objectives
+
+Explain React components
+In React, components are building units of any React application. They are pieces of the UI and enable developers to divide the interface into separate, reusable units that can be maintained and worked on more effectively. React components can be authored as JavaScript classes or functions and render elements that define what to render on screen.
+
+Identify the differences between components and JavaScript functions
+
+Though React components and JavaScript functions are defined in the same way, the primary distinction is purpose and behavior. Components are JSX-returning and handle state or lifecycle methods (in class components), while plain JavaScript functions are for logic and calculation. React components are specifically meant to render UI and handle user interaction.
+
+Identify the types of components
+There are two kinds of components in React: class components and function components . Class components are ES6 classes that inherit from `React.Component` and employ methods such as `render()` and lifecycle methods. Function components are more lightweight, expressed as JavaScript functions, and tend to be used with React Hooks (such as `useState` and `useEffect`) to handle state and side effects.
+
+
+Explain class component
+
+A class component should have a `render()` method, returning the JSX to be rendered. Class components can have their own local state and can handle lifecycle events and are well-suited for complicated UI logic. A function component is a lightweight form of writing components as functions. Function components were initially stateless, but since React 16.8 introduced hooks, function components can use state and side effects now too.
+
+Explain function component
+
+In React, functional components are JavaScript functions that accept props as input and return a React element (JSX) to describe the UI. They are often favored for their simplicity and readability, especially for components that don't require managing their own state or using lifecycle methods. While traditionally considered "stateless," the introduction of React Hooks like useState and useEffect allows functional components to manage state and side effects, blurring the lines between functional and class components
+
+Define component constructor
+The constructor for a component in class components is a unique method for initializing state and binding functions. It is invoked once when the component is initialized. Within the constructor, `super(props)` must be called to be able to use `this.props` within the constructor.
+
+Define render() function
+
+
+The `render()` method is an obligatory method in class components and serves to return the JSX that defines how the UI is supposed to look. It automatically gets invoked when the component's state or the props change, and React has decided whether it should re-render the component or not.
