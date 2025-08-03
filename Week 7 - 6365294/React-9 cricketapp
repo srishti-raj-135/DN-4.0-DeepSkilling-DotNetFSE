@@ -1,0 +1,36 @@
+Objectives
+
+List the features of ES6
+
+ES6 or ECMAScript 2015 brings several powerful features such as 'let' and 'const' for block-scoped variables, arrow functions for concise syntax, classes and inheritance, template literals, destructuring, default parameters, spread and rest operators, Promises for asynchronous programming, modules (import/export), and new data structures like 'Map' and 'Set'.
+
+Explain JavaScript let
+
+'let' is a keyword that declares block-scoped variables in JavaScript. It allows the variable to be reassigned but does not allow redeclaration within the same scope. It helps in avoiding bugs arising from variable scoping.
+
+Identify the differences between var and let
+
+'var' is function scope and allows the same variable to be re-declared within that same scope. On the other hand, 'let' is block scoped and disallows the same variable to be re-declared. Apart from this, variables declared by 'var' are hoisted and initialized with a default value of 'undefined', whereas variables declared by 'let' are hoisted differently because they are not initialized. 
+
+Explain JavaScript const
+
+'const' creates variables that are block-scoped constants. Variables with a 'const' declaration can never be reassigned; however, they can be mutated in the form of changing the object's inner property values or array element values.
+
+Explain ES6 class fundamentals
+
+Essentially, ES6 classes are meant to give a very clean and concise syntax for objects and inheritance. A class can have a constructor method and other methods, and a class can be instantiated using 'new'.
+
+Explain ES6 class inheritance
+
+It inherits using the 'extends' keyword. 'Super()' needs to be called inside the constructor of the child class in order to call the constructor of the parent class and inherit properties and methods.
+
+Define  ES6 arrow functions
+
+Arrow functions provide a quick way of writing functions, using the '=>' symbol. They do not bind their own 'this' value, meaning that they inherit 'this' from the parent scope, hence serving well for the callbacks and closures.
+
+Identify set(), map()
+A 'Set' is a collection of unique values where duplicates will be removed automatically. A 'Map' is a collection of key-value pairs where the keys can be of any data type, and it preserves the order of insertion.
+
+Flag= True
+
+Flag= False
