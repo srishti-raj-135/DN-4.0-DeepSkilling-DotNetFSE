@@ -1,0 +1,33 @@
+Objectives
+
+Define JSX
+
+JSX stands for JavaScript XML. It is a special syntax that allows writing HTML-like tags within a JavaScript file. The main use of JSX is in React to design UI structures in a more human-readable way.
+
+Explain about ECMA Script
+
+ECMAScript is the specification standard upon which JavaScript is based. ES6 is the sixth set of specifications, adding modern capabilities to the language. 
+
+Explain React.createElement()
+
+`React.createElement()` is the method by which JSX creates virtual DOM elements internally. It can be called directly to manually create React elements without resorting to JSX.
+
+Explain how to create React nodes with JSX
+
+React nodes can be created using the JSX syntax. For instance, `<h1>Hello</h1>` creates React nodes that represent an HTML heading element containing the text "Hello." 
+
+Define how to render JSX to DOM
+
+JSX can be rendered to the DOM using `ReactDOM.render()`. For example, `ReactDOM.render(<App />, document.getElementById('root'))` would render the App component inside the DOM node with the ID of `'root'`. 
+
+Explain how to use JavaScript expressions in JSX
+
+JavaScript expressions can be included inside JSX by wrapping them in curly braces `{}`. For instance, `<h1>Hello, {name}</h1>` will render an H1 tag containing "Hello, " followed by whatever string the variable `name` represents.
+
+Explain how to use inline CSS in JSX
+
+Inline CSS in JSX is done with inline styles expressed as a JavaScript object. For instance:
+<h1 style={{ color: 'red', fontSize: '20px' }}>Styled</h1>.
+
+
+
