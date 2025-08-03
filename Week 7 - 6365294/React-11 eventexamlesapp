@@ -1,0 +1,17 @@
+Objectives
+
+Explain React events
+
+React events are similar to DOM events and are triggered by user interactions like clicks or inputs. They are written in camelCase (e.g., onClick) and are handled using functions.
+
+Explain about event handlers
+
+Event handlers are functions that are triggered when a specific event occurs. For example, a button can use onClick={handleClick} to respond to a click event.
+
+Define Synthetic event
+
+A Synthetic Event is a wrapper around the browser’s native event system in React. It ensures consistent behavior across different browsers by normalizing the event object.
+
+Identify React event naming convention
+
+React uses camelCase for event names, such as onClick, onChange, onMouseEnter, etc., unlike the lowercase naming used in HTML.
