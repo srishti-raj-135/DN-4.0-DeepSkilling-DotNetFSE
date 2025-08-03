@@ -1,0 +1,29 @@
+Objectives
+
+Explain various ways of conditional rendering
+
+There are several techniques available for conditional rendering in React, including if/else statements, ternary operators (condition ? true : false), logical AND (&&), or by defining functions that return different components according to specific conditions.
+
+Explain how to render multiple components
+
+Rendering multiple components in React is straightforward. Multiple child components can be grouped within a parent container, such as a <div>, a React.Fragment, or the shorthand <>...</> syntax.
+
+Define list component
+
+A list component in React is designed to render multiple items dynamically. This is commonly achieved using the map() function to iterate over an array and return a list of components to be displayed.
+
+Explain about keys in React applications
+
+Keys in React are unique identifiers assigned to elements within a list. Their primary function is to help React distinguish between individual items when updating the UI, thereby improving rendering performance and accuracy.
+
+Explain how to extract components with keys
+
+Extracting components with keys involves creating a separate component for each item in a list and passing the key as a prop. This practice enhances code structure and maintainability, especially in larger applications.
+
+
+Explain React Map, map() function
+
+The map() function in React is used to iterate over arrays and generate a new array of JSX elements. It is an indispensable method for rendering lists efficiently within React applications.
+
+
+
