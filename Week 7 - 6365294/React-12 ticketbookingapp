@@ -1,0 +1,11 @@
+Objectives
+
+Explain about conditional rendering in React
+
+Conditional rendering in React essentially permits components to display different outputs depending on certain conditions. This is frequently accomplished through the use of if statements, ternary operators, or logical &&. The approach allows for dynamic control over what the user sees based on the state or props.
+
+Define element variables
+Element variables in React refer to variables that are assigned JSX elements. These are particularly useful for conditional rendering; for instance, one might assign either a <LoginButton /> or a <LogoutButton /> to a variable, depending on the current application state.
+
+Explain how to prevent components from rendering
+To prevent a component from rendering in React, simply return null from the component’s render method or function. Doing so instructs React to omit rendering that component in the DOM.
