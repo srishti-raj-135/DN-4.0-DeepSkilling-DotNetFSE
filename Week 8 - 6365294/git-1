@@ -1,0 +1,88 @@
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ git --version
+git version 2.50.1.windows.1
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ git config --global --list
+core.longpaths=true
+core.editor='C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+user.name=Purba6361737
+user.email=22051001@kiit.ac.in
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ notepad++
+bash: notepad++: command not found
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ alias npp='"/c/Program Files/Notepad++/notepad++.exe"'
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ git config --global -e
+
+KIIT@BT-22051001 MINGW64 ~ (master)
+$ mkdir GitDemo
+cd GitDemo
+mkdir: cannot create directory ‘GitDemo’: File exists
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/KIIT/GitDemo/.git/
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ ls -a
+
+./  ../  .git/
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ echo "Welcome to Git Demo" > welcome.txt
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ ls
+welcome.txt
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ cat welcome.txt
+Welcome to Git Demo
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        welcome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git add welcome.txt
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git commit
+Aborting commit due to empty commit message.
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git commit
+[main (root-commit) 26000a4] hi hello
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
