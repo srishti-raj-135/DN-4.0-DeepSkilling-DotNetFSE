@@ -1,0 +1,142 @@
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git checkout main
+git status
+Already on 'main'
+On branch main
+nothing to commit, working tree clean
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git checkout -b GitWork
+echo "<greeting>Hello from branch</greeting>" > hello.xml
+Switched to a new branch 'GitWork'
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (GitWork)
+$ echo "<update>Branch version</update>" >> hello.xml
+git status
+On branch GitWork
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (GitWork)
+$ git add hello.xml
+git commit -m "Added hello.xml in GitWork branch"
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+[GitWork 5d218fc] Added hello.xml in GitWork branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 hello.xml
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (GitWork)
+$ git checkout main
+Switched to branch 'main'
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ echo "<greeting>Hello from master</greeting>" > hello.xml
+git add hello.xml
+git commit -m "Added hello.xml in main branch with different content"
+warning: in the working copy of 'hello.xml', LF will be replaced by CRLF the next time Git touches it
+[main 14c3e92] Added hello.xml in main branch with different content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git log --oneline --graph --decorate --all
+* 14c3e92 (HEAD -> main) Added hello.xml in main branch with different content
+| * 5d218fc (GitWork) Added hello.xml in GitWork branch
+|/
+* 44e688b Add branchfile.txt in GitNewBranch
+* 64a0f21 Add .gitignore to exclude log files and folders
+* 26000a4 hi hello
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git diff GitWork
+diff --git a/hello.xml b/hello.xml
+index 11f5ba8..9d60142 100644
+--- a/hello.xml
++++ b/hello.xml
+@@ -1,2 +1 @@
+-<greeting>Hello from branch</greeting>
+-<update>Branch version</update>
++<greeting>Hello from master</greeting>
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git difftool GitWork
+
+Viewing (1/1): 'hello.xml'
+Launch 'p4merge' [Y/n]? y
+fatal: external diff died, stopping at hello.xml
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git merge GitWork
+Auto-merging hello.xml
+CONFLICT (add/add): Merge conflict in hello.xml
+Automatic merge failed; fix conflicts and then commit the result.
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main|MERGING)
+$ notepad++ hello.xml
+bash: notepad++: command not found
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main|MERGING)
+$ notepad hello.xml
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main|MERGING)
+$ git mergetool
+Merging:
+hello.xml
+
+Normal merge conflict for 'hello.xml':
+  {local}: created file
+  {remote}: created file
+The merge tool p4merge is not available as 'C:/Program Files/Perforce/p4merge.exe'
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main|MERGING)
+$ git add hello.xml
+git commit -m "Resolved merge conflict in hello.xml"
+[main 23f7a1c] Resolved merge conflict in hello.xml
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello_BACKUP_1154.xml
+        hello_BASE_1154.xml
+        hello_LOCAL_1154.xml
+        hello_REMOTE_1154.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ echo "*.BACKUP.*" >> .gitignore
+git add .gitignore
+git commit -m "Ignored P4Merge backup files"
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+[main 21407d6] Ignored P4Merge backup files
+ 1 file changed, 1 insertion(+)
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git branch
+  GitWork
+* main
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git branch -d GitWork
+Deleted branch GitWork (was 5d218fc).
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git log --oneline --graph --decorate
+* 21407d6 (HEAD -> main) Ignored P4Merge backup files
+*   23f7a1c Resolved merge conflict in hello.xml
+|\
+| * 5d218fc Added hello.xml in GitWork branch
+* | 14c3e92 Added hello.xml in main branch with different content
+|/
+* 44e688b Add branchfile.txt in GitNewBranch
+* 64a0f21 Add .gitignore to exclude log files and folders
+* 26000a4 hi hello
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$
