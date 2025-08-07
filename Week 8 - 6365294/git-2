@@ -1,0 +1,56 @@
+
+Explain git ignore
+Explain how to ignore unwanted files using git ignore
+
+.gitignore is a plain text file where you list file patterns for Git to ignore in your repository.
+Examples:
+.log → Ignores all .log files
+log/ → Ignores the entire log folder
+.tmp → Ignores all .tmp files
+Git will ignore new files matching these patterns, not files already being tracked.
+
+
+
+
+
+
+
+
+
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ echo "This is a test log" > error.log
+mkdir log
+echo "Log entry" > log/logfile.log
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ notepad++ .gitignore
+bash: notepad++: command not found
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ notepad .gitignore
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git add .gitignore
+git commit -m "Add .gitignore to exclude log files and folders"
+[main 64a0f21] Add .gitignore to exclude log files and folders
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+KIIT@BT-22051001 MINGW64 ~/GitDemo (main)
+$
+
